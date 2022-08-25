@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <!-- CSS Bootstrap Import -->
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css' rel='stylesheet'
+        integrity='sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx' crossorigin='anonymous'>
+    <!-- CSS Import -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='mobile.css') }}"> -->
+    <title>gwei check</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg m-3">
+            <!-- linking an image -->
+            <img src="{{ url_for('static', filename='/assets/gas-pump.png') }}" width="30" height="30" class="d-inline-block align-top" alt="Gas Pump">
+            <span class="h3 mb-0 px-3">gwei check</span>
+            <ul class="navbar-nav ms-auto">
+                <li class="px-3 nav-item active"><a href="/logout">logout</a></li>
+            </ul>
+        </nav>
+        <div class="row p-1 m-2 gap-3">
+            <div class="text-center col container my-3 py-3">
+                <h3>Set Alert</h3>
+                <div class="box1 mt-4 py-3 justify-content-center">
+                    <p>Send alert when gas fees on Ethereum are low.</p>
+                    <form action="/set/alert" method='POST'>
+                        <input type="hidden" name="id" value="{{user.id}}">
+                        <div class="form-check d-flex justify-content-center align-items-center gap-3">
+                            <input type="checkbox" class="larger" name="email_alert" 
+                            {% if user.email_alert %}
+                            checked
+                            {% endif %}
+                            value="1">
+                            <input type="hidden" name="email_alert" value="0">
+                            <input type="submit" value="Opt In" class="btn">
+                        </div>
+                    </form>
+                    <div class="container mt-5">
+                        <h5>Base Fee + Max Priority Fee</h5>
+                        <div class="row my-4">
+                            <p>Below 8 gwei: Low</p>
+                        </div>
+                        <div class="row my-4 justify-content-md-center">
+                            <div class="col-md-auto">
+                                <img src= "/static/assets/eth.png" width="30" height="30" class="d-inline-block align-top" alt="Ethereum">
+                            </div>
+                            <div class="col-md-auto">
+                                <img src= "/static/assets/eth.png" width="30" height="30" style="opacity:0.2" class="d-inline-block align-top" alt="Ethereum">
+                            </div>
+                            <div class="col-md-auto">
+                                <img src= "/static/assets/eth.png" width="30" height="30" style="opacity:0.2" class="d-inline-block align-top" alt="Ethereum">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center col my-3 py-3">
+                <h3>Edit Account Information </h3>
+                <div class="row justify-content-center my-4">
+                    <div class="col-8">
+                        <div class="card p-2">
+                            <div class="card-body">
+                                <form action='/update/user' method='POST'>
+                                    <!-- HIDDEN INPUT -->
+                                    <input type="hidden" name="id" value="{{user.id}}">
+                                    <!-- FLASH MESSAGE -->
+                                    {% with messages = get_flashed_messages() %}
+                                    {% if messages %}
+                                    {% for message in messages %}
+                                    <p>{{message}}</p>
+                                    {% endfor %}
+                                    {% endif %}
+                                    {% endwith %}
+                                    <div class="mb-3">
+                                        <!-- FIRST NAME -->
+                                        <label class="form-label" for='first_name'>First Name:</label>
+                                        <input class="form-control" type='text' name='first_name' value="{{user.first_name}}">
+                                    </div>
+                                    <div class="mb-3">
+                                        <!-- LAST NAME -->
+                                        <label class="form-label" for='last_name'>Last Name:</label>
+                                        <input class="form-control" type='text' name='last_name' value="{{user.last_name}}">
+                                    </div>
+                                    <div class="mb-3">
+                                        <!-- EMAIL -->
+                                        <label class="form-label" for='email'>Email:</label>
+                                        <input class="form-control" type='text' name='email' value="{{user.email}}">
+                                    </div>
+                                    <div class="mt-4">
+                                        <!-- SUBMIT -->
+                                        <input class="btn" type="submit" value="Update">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

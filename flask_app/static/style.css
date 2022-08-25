@@ -1,0 +1,110 @@
+/* ############################################################
+Imports
+############################################################ */
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+/* ############################################################
+The Great Reset
+############################################################ */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* ############################################################
+Main
+############################################################ */
+body {
+    margin: 0;
+    overflow: hidden;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    transition: all 1s ease-in-out;
+    background-color: rgb(2, 0, 36);
+    background: linear-gradient(153deg, rgba(2, 0, 36, 1) 58%, rgb(0, 8, 255) 100%);
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-color: rgba(2, 0, 36, 1);
+}
+
+
+.box1,
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+}
+
+.box2 {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+
+.gwei {
+    font-size: 3rem;
+}
+
+/* ############################################################
+Navigation Bar
+############################################################ */
+nav {
+    color: white;
+    font-family: 'Inter', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+a:hover {
+    color: white;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 5px;
+}
+
+.hyper {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 5px;
+}
+
+/* ############################################################
+Login
+############################################################ */
+.btn {
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+.btn-danger {
+    border-color: white;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.btn-danger:hover {
+    color: red;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* ############################################################
+Mobile Optimization
+############################################################ */
+@media only screen and (max-width: 500px) {
+    body {
+        overflow: scroll;
+        height: 100%;
+    }
+
+}

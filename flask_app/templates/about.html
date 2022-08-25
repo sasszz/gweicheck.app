@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <!-- CSS Bootstrap Import -->
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css' rel='stylesheet'
+        integrity='sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx' crossorigin='anonymous'>
+    <!-- CSS Import -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='about.css') }}">
+    <title>gwei check</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg m-3">
+            <img src="{{ url_for('static', filename='/assets/gas-pump.png') }}" width="30" height="30"
+                class="d-inline-block align-top" alt="Gas Pump">
+            <span class="h3 mb-0 px-3">gwei check</span>
+            <ul class="navbar-nav ms-auto">
+                <li class="px-3 nav-item active"><a href="/login">login</a></li>
+                <li class="px-3 nav-item active"><a href="/register">register</a></li>
+                <li class="px-3 nav-item active"><a href="/">home</a></li>
+            </ul>
+        </nav>
+        <!-- Regular Display -->
+        <div class="hide-mobile">
+            <div class="row">
+                <div class="text-center col p-3 m-2">
+                    <!-- linking an image -->
+                    <img class="infographic" src="{{ url_for('static', filename='/assets/eth-fees.png') }}"
+                        class="d-inline-block align-top" width=80% alt="Infographic">
+                </div>
+                <div class="text-center col box1 p-3 m-2">
+                    <div class="text-center m-5">
+                        <h3>What is gas?</h3>
+                        <p>Gas refers to a fee required to confirm a transaction on the Ethereum blockchain. Gas is priced
+                            in Gwei, which represents one billionth of an Ether. </p>
+                    </div>
+                    <div class="text-center m-5">
+                        <h3>How are gas fees calculated?</h3>
+                        <p>Calculating the total transaction fee on Ethereum works as follows: Gas units (limit) * (Base fee
+                            + Priority fee). You can see a breakdown of this equation on <a class="hyper"
+                                href="https://ethereum.org/en/developers/docs/gas/#:~:text=Calculating%20the%20total%20transaction%20fee%20works%20as%20follows%3A%20Gas%20units%20(limit)%20*%20(Base%20fee%20%2B%20Tip)">Ethereum's
+                                official website</a>.</p>
+                    </div>
+                    <div class="text-center m-5">
+                        <h3>What is a Priority fee?</h3>
+                        <p>A priority fee is a tip paid directly to the miner to incentivize them to include your
+                            transaction in a block. The higher the tip, the more likely your transaction will be confirmed.
+                        </p>
+                    </div>
+                    <div class="text-center m-5">
+                        <h3>Which API does Gwei Check use?</h3>
+                        <p>Gwei Check uses Blocknative's API to populate Ethereum gas estimates. You can visit their site <a
+                                class="hyper" href="https://www.blocknative.com/gas-platform">here</a>. Blocknative is not
+                            affiliated with this project.</p>
+                    </div>
+                    <div class="text-center m-5">
+                        <h3>lorem</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur sed, possimus veritatis quaerat commodi consequuntur suscipit cumque nam incidunt quibusdam, dolores tempora non ratione amet cum. Nobis aliquid aliquam corrupti.</p>
+                    </div>
+                    <div class="text-center m-5">
+                        <h3>Resources</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur sed, possimus veritatis quaerat commodi consequuntur suscipit cumque nam incidunt quibusdam, dolores tempora non ratione amet cum. Nobis aliquid aliquam corrupti.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Display -->
+        <div class="show-mobile">
+            <div>
+                <div class="text-center col box1 p-3 m-2">
+                    <div class="text-center m-5">
+                        <h3>What is gas?</h3>
+                        <p>Gas refers to a fee required to confirm a transaction on the Ethereum blockchain. Gas is priced
+                            in Gwei, which represents one billionth of an Ether. </p>
+                    </div>
+                    <div class="text-center m-5">
+                        <h3>How are gas fees calculated?</h3>
+                        <p>Calculating the total transaction fee on Ethereum works as follows: Gas units (limit) * (Base fee
+                            + Priority fee). You can see a breakdown of this equation on <a class="hyper"
+                                href="https://ethereum.org/en/developers/docs/gas/#:~:text=Calculating%20the%20total%20transaction%20fee%20works%20as%20follows%3A%20Gas%20units%20(limit)%20*%20(Base%20fee%20%2B%20Tip)">Ethereum's
+                                official website</a>.</p>
+                    </div>
+                    <div class="text-center m-5">
+                        <h3>What is a Priority fee?</h3>
+                        <p>A priority fee is a tip paid directly to the miner to incentivize them to include your
+                            transaction in a block. The higher the tip, the more likely your transaction will be confirmed.
+                        </p>
+                    </div>
+                    <div class="text-center m-5">
+                        <h3>Which API does Gwei Check use?</h3>
+                        <p>Gwei Check uses Blocknative's API to populate Ethereum gas estimates. You can visit their site <a
+                                class="hyper" href="https://www.blocknative.com/gas-platform">here</a>. Blocknative is not
+                            affiliated with this project.</p>
+                    </div>
+                    <div class="text-center m-5">
+                        <h3>lorem</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur sed, possimus veritatis quaerat commodi consequuntur suscipit cumque nam incidunt quibusdam, dolores tempora non ratione amet cum. Nobis aliquid aliquam corrupti.</p>
+                    </div>
+                    <div class="text-center m-5">
+                        <h3>Resources</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur sed, possimus veritatis quaerat commodi consequuntur suscipit cumque nam incidunt quibusdam, dolores tempora non ratione amet cum. Nobis aliquid aliquam corrupti.</p>
+                    </div>
+                </div>
+                <div class="text-center col p-3 m-2">
+                    <!-- linking an image -->
+                    <img class="infographic" src="{{ url_for('static', filename='/assets/eth-fees.png') }}"
+                        class="d-inline-block align-top" width=80% alt="Infographic">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
