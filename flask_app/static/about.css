@@ -95,17 +95,6 @@ Hyperlinks
     border-radius: 5px;
 }
 
-
-@media only screen and (max-device-width: 480px) {
-    .show-mobile {
-        display: block;
-    }
-
-    .hide-mobile {
-        display: none;
-    }
-}
-
 /* ############################################################
 Mobile Optimization
 ############################################################ */
