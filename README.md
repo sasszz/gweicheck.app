@@ -9,6 +9,7 @@
 - Background color adjusts with current gas prices on a scale between blue for low gas fees and red for high gas fees
 - Loading bar indicates when gas fee estimation will refresh
 - Users can register for an account and opt into an email alert for when gas fees are low
+- Display optimized for mobile devices
 
 ### Home Page:
 <p align="center">
@@ -28,4 +29,9 @@
 ### Email Alert:
 <p align="center">
   <img src="/imgs/email.png" />
+</p>
+
+### Mobile Display:
+<p align="center">
+  <img src="/imgs/mobile_display.png" />
 </p>

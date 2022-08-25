@@ -34,10 +34,6 @@ body {
     border-radius: 20px;
 }
 
-.squish {
-    max-width: 550px;
-}
-
 .box2 {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 5px;
@@ -100,4 +96,32 @@ Login
 .btn-danger:hover {
     color: red;
     background: rgba(255, 255, 255, 0.1);
+}
+
+/* ############################################################
+Mobile Optimization
+############################################################ */
+@media only screen and (max-device-width: 820px) {
+    body {
+        overflow: scroll;
+        height: 100%;
+    }
+    
+    .show-mobile {
+        display: block;
+    }
+
+    .hide-mobile {
+        display: none;
+    }
+}
+
+@media only screen and (min-device-width: 821px) {
+    .show-mobile {
+        display: none;
+    }
+
+    .hide-mobile {
+        display: block;
+    }
 }
