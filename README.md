@@ -23,15 +23,10 @@
 
 ### Dashboard Page:
 <p align="center">
-  <img src="/imgs/dashboard.png" />
+  <img src="/imgs/Dashboard.png" />
 </p>
 
 ### Email Alert:
 <p align="center">
   <img src="/imgs/email.png" />
-</p>
-
-### Mobile Display:
-<p align="center">
-  <img src="/imgs/mobile_display.png" />
 </p>
