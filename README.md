@@ -11,6 +11,11 @@
 - Users can register for an account and opt into an email alert for when gas fees are low
 - Display optimized for mobile devices
 
+### Demo
+<p align="center">
+  <img src="/imgs/demo.gif" />
+</p>
+
 ### Home Page:
 <p align="center">
   <img src="/imgs/home.png" />
