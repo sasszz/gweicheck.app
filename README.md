@@ -2,7 +2,9 @@
   <img src="/imgs/gwei_check_banner.gif" />
 </p>
 
-### *A web app where users can check the current cost to transact on the Ethereum Blockchain.*
+### *"Gwei Check" is a gas fee estimator for the Ethereum Blockchain that populates new estimates every 10 seconds.*
+
+"Gwei Check" de-mystifies these estimates with the help of a background color that adjusts along a gradient of blue (low gas fees) to red (high gas fees), as well as a card that indicates if fees are Low, Average, or High. The app can also be configured to send an email alert when gas fees are Low.  A progress bar located at the bottom of the app indicates when gas fee estimates will be refreshed. Fun fact, a "gwei" represents one billionth of an Ether!
 
 ### Key Features:
 - Home page dynamically updates with data from Blocknative's API: https://docs.blocknative.com/gas-platform
